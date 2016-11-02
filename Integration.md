@@ -50,7 +50,7 @@ The API call available for a standard RISC service.
 
 ---------------------------------------
 
-## POST - /authenticate
+## POST - /auth
 
 
 Authenticates a user based on a RISC payload. Returns a trust score indicating the level of RISK associated with the user.
@@ -58,19 +58,42 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 
 #### Required Parameters
 
-- **authreq** - JSON payload of data collected by "script"
+- **riscdata** - JSON payload of data collected by "script"
 
 
 #### Return Values
 
-- **status** - String 'OK' or 'Error'. If it's an error, the specific message is included in the 'error' return value.
-- **error** - Undefined or specific error message.
+- **status** - String 'LW_Success' or 'LW_Failure'. If it's an LW_Failure, the specific message is included in the 'error' return value.
 
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/authenticate" -d '{"authreq":"(jsonvals_riscdata)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/auth" -d '{"riscdata":"(jsonvals_riscdata)"}'"`    
 
-**Response:** `HTTP/1.1 200 OK`    `{ "status": "OK" , "trust" : "HIGH" , "score" : "0.87538745"}`
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745"}`
+
+---------------------------------------
+
+## POST - /account
+
+
+Based on a RISC payload. Returns a trust score indicating the level of RISK associated with the new Sign Up.
+
+
+#### Required Parameters
+
+- **riscdata** - JSON payload of data collected by "script"
+
+
+#### Return Values
+
+- **status** - String 'LW_Success' or 'LW_Failure'. If it's an LW_Failure, the specific message is included in the 'error' return value.
+
+
+### Examples
+
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/account" -d '{"riscdata":"(jsonvals_riscdata)"}'"`    
+
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745"}`
 
 ---------------------------------------
