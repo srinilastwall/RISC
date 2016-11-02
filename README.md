@@ -23,7 +23,21 @@ The API Key shall be provided by email.
 
 The Authorisation token shall be provided by email.
 
+## RISC Script
 
-## URL for RISC Script
+### URL for RISC Script
 
 The current URL for the RISC script shall be provided by email.
+
+## Data Elements Used for Risk Profiling
+
+### Device fingerprinting:
+#### User Agent ,Operating System ,Platform,Language,Browser - proVer,Screen Dimensions,Window Dimensions,Color Depth,Plugin Info,Fonts Info,Session and Local Storages,Dynamic Plugin Behavior,Social Network Reputation Behavior
+
+### Network Fingerprinting:
+#### IP ,DNS,ISP,Confidence factors,Accuracy Radius,User Type,Continent,Country,Subdivisions,City,Postal Code,Metro Code,Time Zone ,Latitude/Longitude,Domain,Page Load Dynamics,Threat Intelligence Correlation Engines
+### Sensory network data from global ISPs
+
+## Form Data
+
+The data for risk profiling is also captured from instrumented custom form fields as needed.Keystroke data and mouse movement sensors are captured as needed from instrumented form fields.
