@@ -1,5 +1,5 @@
 ![Lastwall Logo](lw-logo.jpg) 
-# LastWall RISC - Risk based Authentication Firewall
+# LastWall RISC - Risk based Authentication/Registration Firewall
 
 The LastWall Authentiation Firewall system provides a javascript embeddable in your appropriate page.  The authentication fields, that need to be risk-evaluated are enabled via the script hooks. On submit, the script connects to the LastWall API and returns the trust value / the risk score associated with the username / password combination. Based on browser data, the API intelligently creates and assigns appropriate device profiles to the user. One user might have multiple devices profiles etc.
 
