@@ -14,16 +14,11 @@ The recommended mode of integration is via server-side calls to the API. The dat
 
 Depending on your server-side stack - setup a module to connect to the LastWall API via HTTPS.
 
-### HTTP Basic Authentication
+### HMAC authentication
 
-Lastwall API calls using basic authentication must be sent with the following request header:    
+Lastwall API calls using HMAC authentication must be sent using a secret shared on Sign up with Lastwall    
 
-- **X-LW-Authorization** - a standard HTTP Basic Authentication header  
-- **X-LW-Token** - a standard HTTP Basic Authentication header    
-
-For more information on HTTP Basic Authentication, see [Basic Authentication](http://www.httpwatch.com/httpgallery/authentication/)
-
-This mode of authentication is to be used in conjunction with HTTPS only.
+For more information on HMAC Authentication, see [HMAC Authentication](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code)
 
 ## API Return Values
 
